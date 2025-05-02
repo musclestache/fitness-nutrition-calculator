@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fitness Calculator</title>
+</head>
+<body>
+    <h1>Protein Intake Calculator</h1>
+    <p>Weight (kg): <input type="number" id="weight"></p>
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+    
+    <script>
+        function calculate() {
+            const weight = document.getElementById("weight").value;
+            const protein = weight * 1.6; // 1.6g/kg formula
+            document.getElementById("result").innerHTML = 
+                `Daily protein need: <strong>${protein}g</strong>. Learn more at 
+                <a href="https://musclestache.com/collections/supplements">MuscleStache Supplements</a>.`;
+        }
+    </script>
+</body>
+</html>
